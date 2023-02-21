@@ -1,0 +1,39 @@
+Assignment 1 
+
+Task 1 : @Ashirwad  give a sample ec2  from kodekloud 
+@Mohd  can ssh with pemfile 
+then he will add his public key and then ssh without pemfile. 
+Task 2:  he will create a folder  intern-folder
+Task 3: he will scp a sample.txt file from local to the inter-folder
+Task 4: he will use vi editor and then will copy access log for last 1 hour in this file 
+Task 5: he will use scp and copy this file in his local terminal. 
+
+
+#Server
+Task 1: 
+ssh ubuntu@ec2IP -i test-key.pem
+cd .ssh/
+ls
+Authorize Key
+vi Authorized key (past the Pubkey into this file and save)
+sudo systemctl reboot service
+
+Task 2: mkdir intern-folder
+
+Task 4: 
+cd var/log/wtmp
+last (why we use last command in var/log only
+ans:The last command will, by default, take the system log file /var/log/wtmp as the data source to generate reports)
+
+
+
+#Local
+
+Task 1:
+ssh-keygen (in local server)
+ssh-.....etc
+copy and past this txt into the authorized key
+
+Task 3: scp sample.txt ubuntu@ec-ip:/home/ubuntu/intern-folder
+
+Task 5: scp ubuntu@ec2-IP:intern-folder/sample.txt /home/zapbuild/Documents
